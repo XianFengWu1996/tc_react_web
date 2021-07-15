@@ -1,0 +1,8 @@
+export const SUCESS = '#4BB543'
+export const SUCESSLIGHT = '#5dbc55'
+export const SUCESSDARK = '#43a23c'
+export const FAILED = '#ff0033'
+export const FAILEDLIGHT = '#f08080'
+export const FAILEDDARK = '#b30024'
+export const DISABLED = '#d3d3d3'
+export const BUTTON_RED = '#ff7e7e'

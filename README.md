@@ -66,3 +66,36 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
+// make sure if the credit card dialog is closed, the save card and make default will be set to false
+
+
+#some items to be remove the next patch
+storeInfo 
+    - max delivery
+    - store open
+    - store close
+    - lunch start
+    - lunch close
+
+======= completed ======
+whats left to do 
+cancel button functionality at the review page
+- needs to send a request to the backend
+- the backend needs to make a request to Square to cancel the payment 
+display exp month and year to the card components
+change the request url after all the request related stuff is done
+double check contract and delivery components
+need to add the change password components to the sign up page
+need to add some loading into sign in page
+add a card manage section to account to allow the deletion of the card
+hide the api keys at Credit Card, Delivery which is in the main index.js
+time 
+- when will we start taking order
+- when will we stop taking order
+
+====== in progress =====
+fix order confirmation
+OPTIONAL
+- add options to allow the customer to add extra stuff to the dish

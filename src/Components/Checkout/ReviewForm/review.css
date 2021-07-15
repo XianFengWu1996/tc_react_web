@@ -1,0 +1,82 @@
+
+.light_text{
+    font-weight: 200 !important;
+}
+
+.bold_text{
+    font-weight: bold !important;
+}
+
+.flex_center{
+    display: flex;
+    align-items: center;
+}
+
+.card{
+    width: 75%;
+    margin: 20px 0;
+}
+
+.c_title{
+    font-weight: 200 !important;
+    font-size: 14px !important;
+}
+
+.c_content{
+    font-weight: bold !important;
+    font-size: 18px !important;
+}
+
+.c_icon{
+    margin: 0 30px;
+    font-size: 50px;
+}
+
+.dish_list{
+    width: 75%;
+}
+
+.dish_list_item{
+    display:flex !important;
+    justify-content: space-between !important;
+    list-style: none !important;
+    padding: 20px 20px !important;
+    font-size: 16px;
+}
+
+.summary{
+    width: 75%;
+    margin: 2rem 0
+}
+
+.review_form{
+    margin: 0 6rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .dish_list{
+        width: 95%;
+    }
+    .card{
+        width: 95%;
+    }
+    .summary{
+        width: 95%;
+        margin: 0 !important;
+    }
+    .dish_list_item{
+        padding: 20px 0 !important;
+        font-size: 13px;
+    }
+    .review_form{
+        margin: 0 1rem;
+    }
+    .c_icon{
+        margin: 0 10px;
+        font-size: 25px;
+    }
+    .c_content{
+        font-weight: bold !important;
+        font-size: 16px !important;
+    }
+}

@@ -1,0 +1,65 @@
+:root {
+    --successDark:#43a23c;
+}
+
+
+/* ==================================== */
+/*        CREDIT CARD FORM  */
+/* ==================================== */
+.sq-payment-form {
+    color: #373F4A;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    position: relative;
+    width: 380px;
+  }
+
+@media only screen and (max-width: 600px) {
+    .sq-payment-form{
+        width: 280px;
+    }
+
+    .payment_close_button{
+        position: absolute !important;
+        bottom: 30px;
+        left: 54%;
+        transform: translateX(-100%);
+        border: 1px solid grey !important;
+    }
+}
+  
+.sq-fieldset {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+
+/* ==================================== */
+/*        NEW CREDIT CARD CARD  */
+/* ==================================== */
+.new_cc_card{
+    margin: 20px 0;
+}
+
+.new_cc_card_content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: aliceblue;
+}
+
+/* earned point text */
+.earned_point{
+    color: var(--successDark);
+    font-weight: 600 !important; 
+    display: block;
+    margin-top: 20px !important;
+}
+
+/* Pay online  */
+.pay_online{
+    display: flex;
+    margin: 25px 0 5px 0;
+    align-items: center;
+}
