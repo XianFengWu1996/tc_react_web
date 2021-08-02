@@ -21,6 +21,8 @@ export const registerCardUrl = `${baseUrl}/payment/register_card`;
 
 export const getReportUrl = `${baseUrl}/auth/get_report`
 
+export const getOldReportUrl = `${baseUrl}/auth/get_report_old`
+
 
 
 

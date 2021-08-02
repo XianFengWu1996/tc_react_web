@@ -3,6 +3,7 @@ export const SIGNIN = '/signin';
 export const SIGNUP = '/signup';
 export const ACCOUNT = '/account';
 export const ADMIN = '/admin'
+export const OLD_REPORT= '/oldreport'
 export const CHECKOUT = '/checkout'
 export const ORDER = '/order'
 export const CONFIRMATION = '/confirmation'

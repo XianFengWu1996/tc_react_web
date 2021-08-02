@@ -17,6 +17,7 @@ import Confirmation from "./Components/Order/Confirmation";
 import Reward from "./Components/Reward/Reward";
 import { store } from "./store";
 import { resetCart } from "./redux/actions/cart";
+import OldReport from "./Components/Admin/OldReport";
 
 const App = (props) => {
   useEffect(() => {
@@ -40,6 +41,7 @@ const App = (props) => {
           <Route path={ROUTES.ACCOUNT} component={requireAuth(Account)}/>
           <Route path={ROUTES.CONFIRMATION} component={requireAuth(Confirmation)}/>
           <Route path={ROUTES.REWARD} component={requireAuth(Reward)}/>
+          <Route path={ROUTES.OLD_REPORT} component={requireAdmin(OldReport)}/>
         </Switch>
         
       </Router>
