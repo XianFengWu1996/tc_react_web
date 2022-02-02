@@ -3,6 +3,8 @@
 
 const baseUrl = 'https://us-central1-foodorder-43af7.cloudfunctions.net/app'
 
+// const baseUrl = 'http://localhost:5001/foodorder-43af7/us-central1/app'
+
 export const placeOrderUrl = `${baseUrl}/order/place_order`;
 
 export const calculateDeliveryUrl = `${baseUrl}/delivery/calculate_delivery`;

@@ -92,7 +92,7 @@ const PaymentSelection = (props) => {
             })
             handleClickOpen();
           }}>
-          Add New Card
+          Use Credit Card
         </Button>
       );
     }
@@ -145,13 +145,13 @@ const PaymentSelection = (props) => {
           className='pay_online'
         >
           <Typography style={{ marginRight: "1rem" }}>PAY ONLINE</Typography>
-          <Button
+          {/* <Button
             onClick={handleChangeCard}
             style={{ padding: "0.2rem" }}
             variant="outlined"
           >
             Manage Card
-          </Button>
+          </Button> */}
       </div>        
       )}
 
@@ -174,7 +174,7 @@ const PaymentSelection = (props) => {
         orientation="vertical"
         fullWidth={extraSmallScreen ? true : false}
       >
-        {
+        {/* {
           cards.map((card) => {
             return (
                 <Button
@@ -199,7 +199,7 @@ const PaymentSelection = (props) => {
                 </Button>
             )
           })
-        }
+        } */}
         {handleNewCard()}
       </ButtonGroup>
 

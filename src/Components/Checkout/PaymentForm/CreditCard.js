@@ -206,7 +206,7 @@ class CreditCard extends React.Component {
         </div>
         </fieldset>
           
-          <FormControlLabel
+          {/* <FormControlLabel
             control={
               <Checkbox
                 disabled={this.props.customer.billing.cards.length >= 5}
@@ -216,7 +216,7 @@ class CreditCard extends React.Component {
               />
             }
             label="Save Card"
-          />
+          /> */}
 
           {this.props.customer.billing.cards.length >= 5 ? (
             <Typography color="error" variant="button">

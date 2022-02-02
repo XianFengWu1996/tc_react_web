@@ -138,6 +138,7 @@ export const sendOrder = async (handleComplete, handleError) => {
       console.log(value.data)
       handleComplete(value.data);
     }).catch((e) => {
+      console.log(e);
       handleError(e.response.data.error ? e.response.data.error : 'Failed to send order, try again later..');
     })
   } catch (error) {
