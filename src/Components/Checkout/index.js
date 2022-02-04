@@ -52,18 +52,16 @@ class Checkout extends Component {
     // need to convert the time to utc, because the getHours will return the time on the machine
       let date = moment(Date.now()).tz('America/New_York');
       let currentTime = (date.hour() * 60) + date.minute();
-      let storeIsOpen = (menu.storeTime.storeOpen >= currentTime) && (menu.storeTime.storeClose <= currentTime);
-      let isLunchTime = (menu.storeTime.lunchStart >= currentTime) && (menu.storeTime.lunchEnds <= currentTime)
+      let storeIsOpen = (menu.storeTime.storeOpen <= currentTime) && (menu.storeTime.storeClose >= currentTime);
+      let isLunchTime = (menu.storeTime.lunchStart <= currentTime) && (menu.storeTime.lunchEnds >= currentTime);
 
-      console.log(currentTime);
-       
       this.props.getServerStatus({
         allowLunchDiscount: isLunchTime,
         storeIsOpen: storeIsOpen,
       });
       this.props.calculateTotal();   
             
-      if(storeIsOpen){
+      if(!storeIsOpen){
         // show dialog to inform the user the kitchen is closed
         this.setState({ dialogOpen: true});
 

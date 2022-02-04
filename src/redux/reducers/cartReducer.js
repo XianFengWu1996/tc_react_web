@@ -116,7 +116,7 @@ const cartReducer = (state = initState, action) => {
 
     // calculate the cart total including tax
     case "calculate_total":            
-      let calcLunchDiscount = state.allowLunchDiscount ? Math.floor(state.lunchCount / 3) * 3.90 : 0;
+      let calcLunchDiscount = state.allowLunchDiscount ? Math.floor(state.lunchCount / 3) * 2.90 : 0;
       let calcSubtotal = Math.round((state.cartTotal - calcLunchDiscount - state.discount) * 100) / 100;
       let calcTax = Math.round((calcSubtotal * 0.07) * 100) / 100;
 
