@@ -85,7 +85,7 @@ const SignIn = (props) => {
     setState({ ...state, [e.target.name]: e.target.value });
   };
 
-  let sendInfoToStore = async (user, stopLoading) => {   
+  let sendInfoToStore = async (user) => {   
     await Axios.post(signInUrl, {
       userId: user.uid,
       env: process.env.NODE_ENV,
@@ -124,11 +124,12 @@ const SignIn = (props) => {
 
       store.dispatch(getRewardInfo(rewardInfo));
 
-      stopLoading(false);
+      setLoading(false);
 
       props.history.push(ROUTES.HOME)
     }).catch((e) => {
-      throw Error(e.response.data.error ? e.response.data.error : 'Something went wrong...')
+      console.log(e);
+      throw Error(e.response.data.error ??  'Something went wrong...')
     })
   }
 
@@ -148,7 +149,7 @@ const SignIn = (props) => {
     try {
       let user = (await firebase.auth().signInWithEmailAndPassword(state.email, state.password)).user;
 
-      await sendInfoToStore(user, setLoading);
+      await sendInfoToStore(user);
     } catch (error) {
       setLoading(false)
       setError(error.message ? error.message : 'Unexpected error has occur, failed to login');
@@ -161,7 +162,7 @@ const SignIn = (props) => {
       resetAllError();
 
       let user = (await firebase.auth().signInWithPopup(facebook_provider)).user;
-      await sendInfoToStore(user, setLoading(false))
+      await sendInfoToStore(user)
     } catch (error) {
       setLoading(false)
       setError(error.message ? error.message : 'Unexpected error has occur, failed to login with Facebook');
@@ -174,8 +175,9 @@ const SignIn = (props) => {
       resetAllError();
       
       let user = (await firebase.auth().signInWithPopup(google_provider)).user;
-      await sendInfoToStore(user, setLoading(false))
+      await sendInfoToStore(user)
     } catch (error) {
+      console.log(error);
       setLoading(false);
       setError(error.message ? error.message : 'Unexpected error has occur, failed to login with Google');
     }
