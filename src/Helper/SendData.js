@@ -12,7 +12,7 @@ export const sendContactInfo = async (info) => {
   let {name, phone, verified, closeDialog} = info;
 
   try {
-    await firebase.firestore().collection(`${process.env.NODE_ENV === 'development' ? 'usersTest' : 'users'}/${auth.userId}/customer_information`)
+    await firebase.firestore().collection(`${process.env.NODE_ENV === 'development' ? 'usersTest' : 'users'}/${auth.userId}/customer`)
     .doc("details").update({
       customer: {
         name: name,
@@ -43,7 +43,7 @@ export const updateAddress = async (details) => {
 
   try {
     // update the new data to the database
-    firebase.firestore().collection(`${process.env.NODE_ENV === 'development' ? 'usersTest' : 'users'}/${auth.userId}/customer_information`)
+    firebase.firestore().collection(`${process.env.NODE_ENV === 'development' ? 'usersTest' : 'users'}/${auth.userId}/customer`)
     .doc("details")
     .update({
       address: {
